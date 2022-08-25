@@ -1,6 +1,6 @@
 # Ruby recursion
 
-This repo is part of [The Odin Project's](https://www.theodinproject.com/lessons/ruby-recursion) Ruby curriculum. It contains recursive solutions to several problems.
+This repo is part of [The Odin Project's](https://www.theodinproject.com/lessons/ruby-recursion) Ruby curriculum. It contains [recursive](https://www.youtube.com/watch?v=mz6tAJMVmfM) solutions to several problems.
 
 ## More info
 If you're unfamiliar with either the Fibonacci sequence or the Merge sort:
