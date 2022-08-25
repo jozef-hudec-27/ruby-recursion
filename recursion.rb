@@ -19,8 +19,7 @@ end
 
 def merge_sorted_arrays(arr1, arr2)
   sorted = []
-  left = 0
-  right = 0
+  left,right = 0, 0
 
   while left < arr1.length && right < arr2.length
     if arr1[left] < arr2[right]
