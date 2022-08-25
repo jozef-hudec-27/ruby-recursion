@@ -9,3 +9,10 @@ def fibonacci_iterative(n)
 
   nums
 end
+
+def fibonacci_recursive(n)
+  return (0...n).to_a if n <= 2
+
+  prev = fibonacci_recursive(n - 1)
+  prev.concat([prev[-2] + prev[-1]])
+end
