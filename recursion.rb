@@ -45,13 +45,20 @@ def merge_sorted_arrays(arr1, arr2)
   sorted
 end
 
-def merge_sort(arr)
-  n = arr.length
-  return arr if n <= 1
+# SLICING THE ARRAY EACH TIME WE CALL merge_sort
+# def merge_sort(arr)
+#   n = arr.length
+#   return arr if n <= 1
 
-  left_half_sorted = merge_sort(arr[0...n / 2])
-  right_half_sorted = merge_sort(arr[n / 2..])
+#   left_half_sorted = merge_sort(arr[0...n / 2])
+#   right_half_sorted = merge_sort(arr[n / 2..])
+#   merge_sorted_arrays(left_half_sorted, right_half_sorted)
+# end
+
+def merge_sort(arr, left = 0, right = arr.length)
+  return left == right ? [] : [arr[left]] if right - left <= 1
+
+  left_half_sorted = merge_sort(arr, left, (left + right) / 2)
+  right_half_sorted = merge_sort(arr, (left + right) / 2, right)
   merge_sorted_arrays(left_half_sorted, right_half_sorted)
 end
-
-p merge_sort([1, 7, 4, 1, 0, 58, 96, 32, 14])
